@@ -30,7 +30,7 @@ public class MoreFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_processes, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_more, container, false);
 
         modelArrayList=new ArrayList<>();
         recyclerView=rootView.findViewById(R.id.processesRv);
@@ -41,6 +41,10 @@ public class MoreFragment extends Fragment {
 
 
 
+        modelArrayList.add(new ProcessesModel(R.drawable.sample_process_item,"Send money"));
+        modelArrayList.add(new ProcessesModel(R.drawable.sample_process_item,"Send money"));
+        modelArrayList.add(new ProcessesModel(R.drawable.sample_process_item,"Send money"));
+        modelArrayList.add(new ProcessesModel(R.drawable.sample_process_item,"Send money"));
         modelArrayList.add(new ProcessesModel(R.drawable.sample_process_item,"Send money"));
         modelArrayList.add(new ProcessesModel(R.drawable.sample_process_item,"Send money"));
         modelArrayList.add(new ProcessesModel(R.drawable.sample_process_item,"Send money"));

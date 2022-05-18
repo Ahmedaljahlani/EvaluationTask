@@ -27,21 +27,22 @@
                 android:id="@+id/process_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Test"
                 android:layout_centerVertical="true"
+                android:layout_gravity="center"
                 android:layout_marginStart="10dp"
                 android:layout_toEndOf="@id/process_img"
-                android:textSize="20dp" />
+                android:text="Test"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
 
             <ImageView
                 android:id="@+id/process_btn"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="10dp"
-                android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+                android:src="@drawable/right_arrow" />
 
         </RelativeLayout>
 

@@ -99,7 +99,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginStart="10dp"
                         android:orientation="vertical">
 
                         <ImageView
@@ -112,8 +112,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="send"
+                            android:layout_gravity="center"
                             android:textColor="@color/white"
-                            android:textSize="20dp" />
+                            android:textSize="15dp" />
                     </LinearLayout>
 
 
@@ -121,11 +122,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginStart="10dp"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:src="@drawable/ic_sendomeny" />
@@ -134,13 +135,36 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="send"
+                            android:layout_gravity="center"
                             android:textColor="@color/white"
-                            android:textSize="20dp" />
+                            android:textSize="15dp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_transprocesses" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="process"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginStart="10dp"
                         android:orientation="vertical">
@@ -156,33 +180,12 @@
                             android:layout_height="wrap_content"
                             android:text="process"
                             android:textColor="@color/white"
-                            android:textSize="20dp" />
+                            android:textSize="15dp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="10dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_transprocesses" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="process"
-                            android:textColor="@color/white"
-                            android:textSize="20dp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginStart="10dp"
                         android:orientation="vertical">
@@ -197,13 +200,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="add"
+                            android:layout_gravity="center"
                             android:textColor="@color/white"
-                            android:textSize="20dp" />
+                            android:textSize="15dp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginStart="10dp"
                         android:orientation="vertical">
@@ -218,8 +222,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="pay Bill"
+                            android:layout_gravity="center"
                             android:textColor="@color/white"
-                            android:textSize="20dp" />
+                            android:textSize="15dp" />
                     </LinearLayout>
 
                 </LinearLayout>

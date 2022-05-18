@@ -44,6 +44,9 @@ public class ProcessesFragment extends Fragment {
         modelArrayList.add(new ProcessesModel(R.drawable.sample_process_item,"Send money"));
         modelArrayList.add(new ProcessesModel(R.drawable.sample_process_item,"Send money"));
         modelArrayList.add(new ProcessesModel(R.drawable.sample_process_item,"Send money"));
+        modelArrayList.add(new ProcessesModel(R.drawable.sample_process_item,"Send money"));
+        modelArrayList.add(new ProcessesModel(R.drawable.sample_process_item,"Send money"));
+        modelArrayList.add(new ProcessesModel(R.drawable.sample_process_item,"Send money"));
 
 
 
