@@ -122,8 +122,8 @@
                     android:id="@+id/processesRv"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="55dp"
                     android:layout_below="@id/processesTxt"
+                    android:layout_marginBottom="55dp"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     tools:listitem="@layout/processes_item" />
             </RelativeLayout>
@@ -137,6 +137,6 @@
         android:layout_height="55dp"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
-        style=""
+        android:background="@color/white"
         app:menu="@menu/main" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

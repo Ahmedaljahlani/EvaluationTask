@@ -259,5 +259,6 @@
         android:layout_height="55dp"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
+        android:background="@color/white"
         app:menu="@menu/main" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -60,8 +60,6 @@ public class MainActivity extends AppCompatActivity {
 
                 JSONObject param = new JSONObject();
                 try {
-
-
                     JSONObject jsonObject = new JSONObject();
                     jsonObject.put("P_AGT_CODE", agentCode);
                     jsonObject.put("P_AGT_NO", agentCode);
@@ -108,12 +106,14 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                        Intent intent=new Intent(MainActivity.this,ProcessesActivity.class);
+                        startActivity(intent);
                         Log.e("error",error.toString());
                     }
                 }){
                     @Override
                     public Map<String, String> getHeaders() throws AuthFailureError {
-                        return super.getHeaders();
+                        return super.getParams();
                     }
                 };
                 Volley.newRequestQueue(MainActivity.this).add(jsonObjectRequest);
