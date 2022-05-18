@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/processes"
+        android:icon="@drawable/process"
+        android:title="processes" />
+    <item
+        android:id="@+id/report"
+        android:icon="@drawable/file"
+        android:title="report" />
+    <item
+        android:id="@+id/more"
+        android:icon="@drawable/option"
+        android:title="more" />
+
+</menu>
