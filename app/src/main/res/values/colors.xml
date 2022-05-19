@@ -11,4 +11,6 @@
     <color name="loginTxt">#004F62</color>
 
     <color name="red">#FF0000</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="grey">#63040303</color>
 </resources>

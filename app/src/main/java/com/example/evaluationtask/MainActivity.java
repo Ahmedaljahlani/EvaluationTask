@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -31,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Window window = this.getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.setStatusBarColor(this.getResources().getColor(R.color.transparent));
+
+
         agentCodeEDTxt=findViewById(R.id.agentcode);
         usernameEDTxt=findViewById(R.id.username);
         passwordEDTxt=findViewById(R.id.password);
@@ -55,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
                     if (password.isEmpty()) {
                         passwordEDTxt.setError("required");
                     }
-                }//most deleted
+                    return;
+                }
                 password = EncryptionData.calculateRFC2104HMAC(password);
 
                 JSONObject param = new JSONObject();
@@ -74,13 +83,13 @@ public class MainActivity extends AppCompatActivity {
 
                     e.printStackTrace();
                 }
-
                 JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                         "http://mapp.yemensoft.net/MTXAgentService/api/MTXAgent/CheckLogIn",
                         param, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-
+                        startActivity(new Intent(MainActivity.this,ProcessesActivity.class));
+                        finish();
                         try {
                             Log.e("error",response.toString());
 
@@ -106,17 +115,12 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
-                        Intent intent=new Intent(MainActivity.this,ProcessesActivity.class);
-                        startActivity(intent);
+//                        Intent intent=new Intent(MainActivity.this,ProcessesActivity.class);
+//                        startActivity(intent);
                         Log.e("error",error.toString());
                     }
-                }){
-                    @Override
-                    public Map<String, String> getHeaders() throws AuthFailureError {
-                        return super.getParams();
-                    }
-                };
-                Volley.newRequestQueue(MainActivity.this).add(jsonObjectRequest);
+                });
+                VolleySingleton.getInstance(MainActivity.this).addToRequestQueue(jsonObjectRequest);
             }
         });
     }
